@@ -535,14 +535,15 @@
           }
         });
 
-        const response = await fetch("/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          },
-          body: body.toString(),
-          signal: controller.signal
-        });
+        const response = await fetch(form.action, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+  },
+  body: body.toString(),
+  signal: controller.signal
+});
 
         if (!response.ok) {
           throw new Error("Submission was not accepted.");
