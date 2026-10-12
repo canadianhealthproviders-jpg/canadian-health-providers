@@ -2484,3 +2484,209 @@ body.intro-running .hero__content {
   white-space: nowrap;
   font-size: clamp(12px, 3.5vw, 16px);
 }
+/* Updated logo and brand layout */
+
+.site-header .brand,
+.site-footer .brand {
+  min-width: 0;
+  gap: 12px;
+}
+
+.site-header .brand__logo,
+.site-footer .brand__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 100px;
+  height: 70px;
+  padding: 6px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.site-header .brand__logo img,
+.site-footer .brand__logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.site-header .brand__text,
+.site-footer .brand__text {
+  min-width: 0;
+}
+
+.site-header .brand__name,
+.site-footer .brand__name {
+  display: block;
+  font-size: clamp(12px, 1.2vw, 17px);
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+/* Opening screen logo */
+
+.opening-screen__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(280px, 75vw);
+  height: auto;
+  aspect-ratio: 1630 / 975;
+  padding: 16px;
+  background: #fff;
+  border-radius: 18px;
+}
+
+.opening-screen__logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.opening-screen__name {
+  max-width: 90vw;
+  margin-inline: auto;
+  font-size: clamp(16px, 3vw, 26px);
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Six service cards */
+
+.page-services #available-services .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.page-services #available-services .benefit-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.page-services #available-services .benefit-card h3 {
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.page-services #available-services .benefit-card .text-link {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.page-services #available-services .text-link span {
+  min-width: 0;
+}
+
+.page-services #available-services .text-link .icon {
+  flex-shrink: 0;
+}
+
+#available-services,
+#appointment,
+#location {
+  scroll-margin-top: 120px;
+}
+
+.contact-email,
+.contact-email span,
+.site-footer address a {
+  overflow-wrap: anywhere;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .site-header .brand__logo {
+    width: 80px;
+    height: 58px;
+  }
+
+  .site-header .brand {
+    gap: 8px;
+  }
+
+  .site-header .brand__name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-services #available-services .benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .site-header .header__inner {
+    gap: 8px;
+  }
+
+  .site-header .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .site-header .brand__logo {
+    width: 64px;
+    height: 48px;
+    padding: 4px;
+    border-radius: 8px;
+  }
+
+  .site-header .brand__name {
+    font-size: clamp(10px, 2.65vw, 14px);
+    letter-spacing: -0.35px;
+  }
+
+  .site-header .menu-toggle {
+    flex-shrink: 0;
+  }
+
+  .site-footer .brand__logo {
+    width: 80px;
+    height: 58px;
+  }
+
+  .site-footer .brand__name {
+    font-size: clamp(11px, 3vw, 15px);
+  }
+
+  .page-services #available-services .benefits-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  #available-services,
+  #appointment,
+  #location {
+    scroll-margin-top: 100px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header .brand__logo {
+    width: 52px;
+    height: 40px;
+  }
+
+  .site-header .brand {
+    gap: 6px;
+  }
+
+  .site-header .brand__name {
+    font-size: 10px;
+  }
+}
